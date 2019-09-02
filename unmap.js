@@ -1,4 +1,4 @@
-const SOURCE_MAP_FILE = './main.dfe5964f.js.map'
+const SOURCE_MAP_FILE = './mapper.js.map'
 const OUT_PATH = './blob'
 
 const { SourceMapConsumer } = require('source-map')
@@ -34,11 +34,12 @@ const sanitizeFilePath = (function () {
     }
   })()
 
-  const illegalRe = /[\?<>:\*\|":]/g
+  const illegalRe = /[?<>:*|":]/g
+  /* eslint-disable-next-line */
   const controlRe = /[\x00-\x1f\x80-\x9f]/g
   const reservedRe = /^\.+$/
   const windowsReservedRe = /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i
-  const windowsTrailingRe = /[\.\s]+$/
+  const windowsTrailingRe = /[.\s]+$/
   const anySlashes = /(\/|\\){1,}/g // concats multiple slashes
 
   return function sanitizeFilePath (l, input = '', replacement = '_') {
