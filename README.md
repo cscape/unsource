@@ -1,12 +1,14 @@
-# **WARNING!! PLEASE READ**
+# Unsource ✨
 
-This an **EXTREMELY UNSTABLE** project created for specific needs.
-
-I'm not responsible for the destruction of any country, your job, or your neighborhood cat's uprising to form an anti-human militia.
+This package lets you extract original source code from a sourcemap. Since sourcemaps are language-agnostic, this works with any valid sourcemap.
 
 ## Usage
 
-Place a JavaScript sourcemap (theoretically any sourcemap works: not tested) into the root directory of this project. Change the `SOURCE_MAP_FILE` variable in [unmap.js](unmap.js) to the location of the sourcemap. Run `npm start` or `node unmap.js`
+Place a sourcemap into the root directory of this project. Title it `mapping.js.map`. Then start the script:
+
+```bash
+npm start
+```
 
 ## License
 
